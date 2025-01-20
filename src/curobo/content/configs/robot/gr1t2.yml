@@ -1,0 +1,185 @@
+##
+## Copyright (c) 2023 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+##
+## NVIDIA CORPORATION, its affiliates and licensors retain all intellectual
+## property and proprietary rights in and to this material, related
+## documentation and any modifications thereto. Any use, reproduction,
+## disclosure or distribution of this material and related documentation
+## without an express license agreement from NVIDIA CORPORATION or
+## its affiliates is strictly prohibited.
+##
+
+robot_cfg:
+  kinematics:
+    # use_usd_kinematics: False
+    # usd_path: "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.2/Isaac/Robots/FourierIntelligence/GR-1/GR1_T2.usd"
+    # isaac_usd_path: "/Isaac/Robots/FOURIERINTELLIGENCE/GR1_T2.usd"
+    # usd_robot_root: "/GR1_T2"
+    # usd_path: "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.2/Isaac/Robots/FourierIntelligence/GR-1/GR1_T2.usd"
+    # usd_robot_root: "/GR1_T2"
+    # isaac_usd_path: "http://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.2/Isaac/Robots/FourierIntelligence/GR-1/GR1_T2.usd"
+    # isaac_usd_path: ""
+    use_usd_kinematics: False
+    # urdf_path: "robot/fourier_intelligence/GR1_T2/GR1_T2.urdf"
+    # asset_root_path: "robot/fourier_intelligence/GR1_T2"
+    urdf_path: "robot/fourier_intelligence/Collected_GR1_T2/GR1_T2.urdf"
+    asset_root_path: "robot/fourier_intelligence/Collected_GR1_T2"
+    isaac_usd_path: "/Isaac/Robots/FourierIntelligence/GR-1/GR1_T2.usd"
+    usd_robot_root: "/GR1_T2"
+    usd_path: "robot/fourier_intelligence/GR1_T2/GR1_T2.usd"
+
+    usd_flip_joints: {}
+    usd_flip_joint_limits: []
+
+    # urdf_path: "/home/taiting/work/isaac_sim_humanoid/src/humanoid-manipulator/humanoid_description/urdf/GR1_T2.urdf"
+    # # urdf_path: "/home/taiting/work/isaac_sim_humanoid/src/humanoid-manipulator/humanoid_description/urdf/GR1_T2.urdf.xacro"
+    # asset_root_path: "/humanoid_description"
+    
+    base_link: "link_torso"
+    ee_link: "L_hand_base_link"
+    link_names: null
+    # link_names: [
+    #             'l_hand_roll',
+    #             'l_hand_yaw',
+    #             'l_lower_arm_pitch',
+    #             'l_upper_arm_pitch',
+    #             'l_upper_arm_roll',
+    #             'l_upper_arm_yaw',
+    #             'link_torso',
+    #             ]
+    lock_joints: null
+    # lock_joints: {"joint_head_pitch": 0.0, 
+    #               "joint_head_yaw": 0.0,
+    #               "joint_head_roll": 0.0,
+    #               "joint_waist_pitch": 0.0,
+    #               "joint_waist_roll": 0.0,
+    #               "joint_waist_yaw": 0.0,
+    #               "l_ankle_pitch": 0.0,
+    #               "l_ankle_roll": 0.0,
+    #               "l_hip_pitch": 0.0,
+    #               "l_hip_roll": 0.0,
+    #               "l_hip_yaw": 0.0,
+    #               "l_knee_pitch": 0.0,
+    #               "r_ankle_pitch": 0.0,
+    #               "r_ankle_roll": 0.0,
+    #               "r_hip_pitch": 0.0,
+    #               "r_hip_roll": 0.0,
+    #               "r_hip_yaw": 0.0,
+    #               "r_knee_pitch": 0.0,}
+    # lock_joints: {
+    #               "l_wrist_roll": 0.0,
+    #               }
+    extra_links: null
+
+    
+    collision_link_names: [] # List[str]
+    collision_spheres: {}
+
+
+    collision_sphere_buffer: 0.01
+    extra_collision_spheres: {}
+    self_collision_ignore: {}
+    self_collision_buffer: {} 
+      
+    # use_global_cumul: True
+    mesh_link_names:  ['L_hand_base_link', 
+                       'L_index_intermediate',
+                       'L_index_proximal',
+                       'L_middle_intermediate',
+                       'L_middle_proximal',
+                       'L_pinky_intermediate',
+                       'L_pinky_proximal',
+                       'L_ring_intermediate',
+                       'L_ring_proximal',
+                       'L_thumb_intermediate',
+                       'L_thumb_proximal',
+                       'L_thumb_proximal_base',
+                       'R_hand_base_link',
+                       'R_index_intermediate',
+                       'R_index_proximal',
+                       'R_middle_intermediate',
+                       'R_middle_proximal',
+                       'R_pinky_intermediate',
+                       'R_pinky_proximal',
+                       'R_ring_intermediate',
+                       'R_ring_proximal',
+                       'R_thumb_intermediate',
+                       'R_thumb_proximal',
+                       'R_thumb_proximal_base',
+                       'Root',
+                       'l_foot_pitch',
+                       'l_foot_roll',
+                       'l_hand_roll',
+                       'l_hand_yaw',
+                       'l_lower_arm_pitch',
+                       'l_shank_pitch',
+                       'l_thigh_pitch',
+                       'l_thigh_roll',
+                       'l_thigh_yaw',
+                       'l_upper_arm_pitch',
+                       'l_upper_arm_roll',
+                       'l_upper_arm_yaw',
+                       'link_head_pitch',
+                       'link_head_roll',
+                       'link_head_yaw',
+                       'link_imu',
+                       'link_torso',
+                       'link_waist_pitch',
+                       'link_waist_roll',
+                       'link_waist_yaw',
+                       'R_foot_pitch',
+                       'R_foot_roll',
+                       'R_hand_roll',
+                       'R_hand_yaw',
+                       'R_lower_arm_pitch',
+                       'R_shank_pitch',
+                       'R_thigh_pitch',
+                       'R_thigh_roll',
+                       'R_thigh_yaw',
+                       'R_upper_arm_pitch',
+                       'R_upper_arm_roll',
+                       'R_upper_arm_yaw',
+                        ] # List[str]
+
+    cspace:
+      joint_names: ['l_shoulder_pitch', 
+                    'l_shoulder_roll', 
+                    'l_shoulder_yaw',
+                    'l_elbow_pitch',
+                    'l_wrist_pitch', 
+                    'l_wrist_yaw', 
+                    'l_wrist_roll', 
+                    ]
+      retract_config:  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+      null_space_weight:  [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      cspace_distance_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+      max_jerk: 500.0
+      max_acceleration: 12.0
+      position_limit_clip: 0.1
+
+    # cspace:
+    #   joint_names: ['l_shoulder_pitch', 
+    #                 'l_shoulder_roll', 
+    #                 'l_shoulder_yaw',
+    #                 'l_elbow_pitch',
+    #                 'l_wrist_yaw', 
+    #                 'l_wrist_roll', 
+    #                 ]
+    #   retract_config:  [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    #   null_space_weight:  [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    #   cspace_distance_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    #   max_jerk: 500.0
+    #   max_acceleration: 12.0
+    #   position_limit_clip: 0.1
+
+
+    # cspace:
+    #   joint_names: ['L_index_proximal_joint', 
+    #                 'L_index_intermediate_joint', 
+    #                 ]
+    #   retract_config:  [0.0, 0.0]
+    #   null_space_weight:  [1.0, 1.0]
+    #   cspace_distance_weight: [1.0, 1.0]
+    #   max_jerk: 500.0
+    #   max_acceleration: 12.0
+    #   position_limit_clip: 0.1
